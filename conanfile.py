@@ -2,7 +2,7 @@ from conans import ConanFile, CMake
 
 class BoostConan(ConanFile):
    settings = "os", "compiler", "build_type", "arch"
-   requires = "boost/1.73.0" # comma-separated list of requirements
+   requires = "boost/1.73.0", "gtest/1.10.0" # comma-separated list of requirements
    generators = "cmake"
    default_options = {"boost:shared": True}
 
