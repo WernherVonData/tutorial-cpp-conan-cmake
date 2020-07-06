@@ -7,6 +7,8 @@ add_library(${PROJECT_NAME}
   src/Animal.cpp
   src/Dog.cpp)
 
+add_subdirectory(test)
+
 target_include_directories(${PROJECT_NAME}
 PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}/include
