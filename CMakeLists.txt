@@ -7,8 +7,7 @@ add_subdirectory(animals)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 
-set(INCLUDES)
-
 conan_basic_setup()
-add_executable(tutorial-cpp-conan-cmake main.cpp)
-target_link_libraries(tutorial-cpp-conan-cmake ${CONAN_LIBS} Animals)
+
+add_executable(${PROJECT_NAME} main.cpp)
+target_link_libraries(${PROJECT_NAME} PUBLIC boost Animals)

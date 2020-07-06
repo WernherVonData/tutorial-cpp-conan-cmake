@@ -14,11 +14,9 @@ public:
   ~Dog() = default;
   const std::string GetName() const override;
   const std::string GetSound() const override;
-  const std::int GetLimbs() const override;
+  const int GetLimbs() const override;
 
-private:
-  const std::string name;
-  const int number_of_libs;
+  private:
   const std::string sound;
 };
 
