@@ -1,13 +1,18 @@
 project(animals_unittests)
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup(TARGETS)
-
 add_executable(${PROJECT_NAME}
   testAnimals.cpp)
 
 target_link_libraries(${PROJECT_NAME}
-  PUBLIC 
+  PRIVATE 
+    Animals  
     CONAN_PKG::gtest
-    Animals
+)
+
+target_include_directories(${PROJECT_NAME} PRIVATE ../src)
+
+add_test(
+  name animals_unuittest
+  COMMAND ${CMAKE_BINARY_DIR}/bin
+  WORKING_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
 )
