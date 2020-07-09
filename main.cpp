@@ -4,8 +4,8 @@
 
 #include "boost/optional.hpp"
 
-#include <Animal.hpp>
-#include <Dog.hpp>
+#include <animals/Animal.hpp>
+#include <animals/Dog.hpp>
 
 boost::optional<std::string> GetString() {
   return boost::none;

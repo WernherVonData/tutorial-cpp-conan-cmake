@@ -1,4 +1,4 @@
-#include "Animal.hpp"
+#include "animals/Animal.hpp"
 
 #include <stdexcept>
 

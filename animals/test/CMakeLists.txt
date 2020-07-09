@@ -1,22 +1,16 @@
-project(animals_unittests)
+add_executable(animals-unittest
+        testAnimals.cpp
+        )
 
-add_executable(${PROJECT_NAME}
-  testAnimals.cpp)
+include(GoogleTest)
 
-find_package(GTest REQUIRED)
-
-enable_testing()
-
-target_link_libraries(${PROJECT_NAME}
-  PRIVATE 
-    Animals  
-    GTest::GTest
+target_link_libraries(animals-unittest
+  PUBLIC
+#   CONAN_PKG::gtest
+  Animals
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE ../src)
-
-add_test(
-  name animals_unittests
-  COMMAND ${CMAKE_BINARY_DIR}/bin
-  WORKING_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
+add_test(NAME animals-unittest
+  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+  COMMAND animals-unittest
 )
