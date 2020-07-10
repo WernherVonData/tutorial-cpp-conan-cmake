@@ -5,7 +5,7 @@ class BoostConan(ConanFile):
    
    generators = "cmake"
    
-   default_options = {"boost:shared": True, "gtest:build_gmock": False}
+   default_options = {"boost:shared": True}
 
    requires = ("boost/1.73.0") # comma-separated list of requirements
    
