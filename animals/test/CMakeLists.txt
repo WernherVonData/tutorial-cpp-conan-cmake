@@ -2,11 +2,12 @@ add_executable(animals-unittest
         testAnimals.cpp
         )
 
-include(GoogleTest)
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
 
 target_link_libraries(animals-unittest
   PUBLIC
-#   CONAN_PKG::gtest
+  CONAN_PKG::gtest
   Animals
 )
 

@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
-#include <Animal.hpp>
-#include <Dog.hpp>
+#include <animals/Animal.hpp>
+#include <animals/Dog.hpp>
 
 namespace animals {
 namespace test {
