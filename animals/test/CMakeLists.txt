@@ -2,8 +2,7 @@ add_executable(animals-unittest
         testAnimals.cpp
         )
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup(TARGETS)
+find_package(GTest REQUIRED)
 
 target_link_libraries(animals-unittest
   PUBLIC
