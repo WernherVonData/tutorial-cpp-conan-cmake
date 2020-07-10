@@ -7,14 +7,16 @@
 
 ## Project Motivation <a name="motivation"></a>
 
-In my daily work, I'm using C++, CMake, Conan, and gtest around 80% of the time. But you know what? I've NEVER had an opportunity to set up such a project from scratch. Always I was encountering the ready project 'just to build' or someone else was doing that. It's a shame, so I'm going to do it here. I'm doing it for myself and for everyone who would like to start working in such an environment. 
+In my daily work, I'm using C++, CMake, Conan, and gtest around 80% of the time. But I've NEVER had an opportunity to set up such a project from scratch. I was always in situation when the project was in 'just to build' state or someone else was doing that. It's a shame, so I'm going to do it here.
 
-In my work I was using VS Code with the following plugins:
+In project I was using VS Code with the following plugins:
 * C/C++
 * C++ Test Mate
 * CMake
 * CMake Tools
-For compilation, I was using Clang 8.0.1.
+For compilation, I was using Clang 10.0.
+
+For conan building all dependencies from sources I've created a new profile with environment variables CC and CXX set - one of boost dependencies is written in pure C and GTest uses CXX variable to be built. 
 
 ## Licensing, Authors, and Acknowledgements <a name="licensing"></a>
 
