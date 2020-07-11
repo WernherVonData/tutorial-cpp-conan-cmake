@@ -26,7 +26,7 @@ How to install for the newbie (Linux):
 
 Install CMake in your system. You can install plugins as well.
 
-Install Conan to your system - python required - you can install it purely or under python venv (remember then to switch to it in VS Code Terminal) - specific instructions can be found <a href=" https://docs.conan.io/en/latest/installation.html">here</a>.
+Install Conan to your system - python required - you can install it purely or under python venv (remember then to switch to it in VS Code Terminal) - specific instructions can be found <a href="https://docs.conan.io/en/latest/installation.html">here</a>.
 
 When the project is open create 'build' directory and from that directory type:
 
