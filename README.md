@@ -24,7 +24,7 @@ For conan building all dependencies from sources I've created a new profile with
 
 How to install for the newbie (Linux):
 
-Install aforementioned plugins to VS Code and reload window.
+Install CMake in your system. You can install plugins as well.
 
 Install Conan to your system - python required - you can install it purely or under python venv (remember then to switch to it in VS Code Terminal) - specific instructions can be found <a href=" https://docs.conan.io/en/latest/installation.html">here</a>.
 
