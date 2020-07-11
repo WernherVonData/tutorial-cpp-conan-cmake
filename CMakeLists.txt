@@ -2,7 +2,11 @@ cmake_minimum_required(VERSION 3.14.0)
 project(tutorial-cpp-conan-cmake)
 
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}-Wall -Wextra")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+
+if (UNIX)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wextra")
+endif(UNIX)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(TARGETS)
@@ -15,4 +19,4 @@ target_link_libraries(${PROJECT_NAME}
   CONAN_PKG::boost
   Animals)
 
-  add_subdirectory(animals)
+add_subdirectory(animals)
