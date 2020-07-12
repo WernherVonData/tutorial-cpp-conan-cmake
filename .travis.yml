@@ -25,6 +25,6 @@ script:
 # Build project
 - mkdir build && cd build
 - conan install .. --profile ./../conan-profiles/linux_x86_64 --build missing
-- cmake .. cmake -DCMAKE_C_COMPILER=clang-8 -DCMAKE_CXX_COMPILER=clang++-8
+- cmake .. -DCMAKE_C_COMPILER=clang-8 -DCMAKE_CXX_COMPILER=clang++-8
 - cmake --build
 - ctest
