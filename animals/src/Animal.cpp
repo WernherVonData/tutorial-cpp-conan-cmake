@@ -16,8 +16,11 @@ namespace animals {
     }
   }
 
-  const std::string Animal::GetName() const {return name; }
-  const std::string Animal::GetSound() const {return ""; }
-  const int Animal::GetLimbs() const {return number_of_limbs;}
+  std::string Animal::GetName() const { return name; }
+  int Animal::GetLimbs() const { return number_of_limbs; }
 
+  std::ostream& operator<<(std::ostream& out, const Animal& animal) {
+    return out << "Animal:\nName: [" << animal.GetName() <<"]\n"
+      << "Limbs: [" << animal.GetLimbs() << "]";
+  }
 }
