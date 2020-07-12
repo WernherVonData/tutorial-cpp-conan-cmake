@@ -1,0 +1,30 @@
+language: cpp
+
+compiler:
+- clang
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - clang-10
+    - clang++-10
+    - python3
+
+install:
+# Install pip
+- curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+- sudo python3.4 get-pip.py
+# Install Conan.
+- sudo pip install conan
+# Automatic detection of your arch, compiler, etc.
+- conan user
+
+script:
+# Build project
+- mkdir build && cd build
+- conan .. install --build missing --profile ./conan-profiles/linux_x86_64
+- cmake ..
+- cmake --build
+- ctest
