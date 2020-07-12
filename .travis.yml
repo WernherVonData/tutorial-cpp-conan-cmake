@@ -19,6 +19,7 @@ install:
 - sudo python3 get-pip.py
 # Install Conan.
 - sudo pip install conan
+# This one is to avoid autoimport error - was occuring on the Ubuntu 16 in CI
 - sudo pip install --upgrade jinja2
 
 script:
