@@ -24,7 +24,7 @@ install:
 script:
 # Build project
 - mkdir build && cd build
-- conan .. install --build missing --profile
+- conan .. install --build missing
 - cmake ..
 - cmake --build
 - ctest
