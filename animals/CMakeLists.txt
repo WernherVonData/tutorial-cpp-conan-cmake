@@ -1,11 +1,18 @@
 project(Animals)
 
+set(HEADERS
+  include/animals/Animal.hpp
+)
+
+set(SOURCES
+  src/Animal.cpp
+)
+
 add_library(${PROJECT_NAME}
   STATIC
-  include/animals/Animal.hpp
-  include/animals/Dog.hpp
-  src/Animal.cpp
-  src/Dog.cpp)
+  ${HEADERS}
+  ${SOURCES}
+)
 
 target_include_directories(${PROJECT_NAME}
 PUBLIC

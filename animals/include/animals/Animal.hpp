@@ -1,6 +1,7 @@
 #ifndef ANIMAL_HPP
 #define ANIMAL_HPP
 
+#include <ostream>
 #include <string>
 
 namespace animals {
@@ -12,13 +13,15 @@ class Animal {
    */
   Animal(const std::string& name, const int number_of_limbs);
   virtual ~Animal() = default;
-  virtual const std::string GetName() const;
-  virtual const int GetLimbs() const;
-  virtual const std::string GetSound() const;
+  virtual std::string GetName() const;
+  virtual int GetLimbs() const;
+
 
   private:
   const std::string name;
   const int number_of_limbs;
 };
+
+std::ostream& operator<<(std::ostream& out, const Animal& animal);
 }
 #endif

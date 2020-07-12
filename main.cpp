@@ -1,20 +1,17 @@
 #include <iostream>
 #include <string>
-#include <vector>
 
 #include "boost/optional.hpp"
 
 #include <animals/Animal.hpp>
-#include <animals/Dog.hpp>
 
-boost::optional<std::string> GetString() {
+boost::optional<std::string> GetOptionalString() {
   return boost::none;
 }
 
-int main(int argc, char *argv[])
+int main(int /*argc*/, char **/*argv[]*/)
 {
-  std::cout << "Hello conan" << std::endl;
-  auto str = GetString();
+  auto str = GetOptionalString();
   if (str) {
     std::cout << str.get() << std::endl;
   }
@@ -22,10 +19,9 @@ int main(int argc, char *argv[])
     std::cout << "String is null" << std::endl;
   }
 
-  animals::Animal something("UGA BUGA", 3);
-  animals::Dog dog("Butch", 4);
+  animals::Animal zebra("Benny the Zebra", 4);
   
-  std::cout << dog.GetSound() << std::endl;
+  std::cout << zebra << std::endl;
 
   return 0;
 }
