@@ -8,8 +8,8 @@ addons:
     sources:
     - ubuntu-toolchain-r-test
     packages:
-    - clang-10
-    - clang++-10
+    - llvm-8
+    - llvm-8-dev
     - python3
     - cmake
 
